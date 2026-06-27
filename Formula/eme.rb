@@ -5,7 +5,7 @@
 class Eme < Formula
   desc "Mission control for your AI coding agents — run each in its own git worktree + tmux session"
   homepage "https://eme.jinmu.me"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Eme < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alderwork/eme/releases/download/v0.1.1/eme_Darwin_x86_64.tar.gz"
-      sha256 "97277c3f1852f7e1933c535b7b54956aec983f76bf9018ffc934f05e22a68add"
+      url "https://github.com/alderwork/eme/releases/download/v0.1.2/eme_Darwin_x86_64.tar.gz"
+      sha256 "7a28e81ae7340600a5ea92846f932224cecd88b41eb5d6e6f69a979f851ebfc3"
 
       define_method(:install) do
         bin.install "eme"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alderwork/eme/releases/download/v0.1.1/eme_Darwin_arm64.tar.gz"
-      sha256 "c157ccfb394aca392278a5f5c762921f4e4dd9a6a8f9982da50abef7f9491f25"
+      url "https://github.com/alderwork/eme/releases/download/v0.1.2/eme_Darwin_arm64.tar.gz"
+      sha256 "03a168eb8bb7b0b96fc7d6b39a0d8a2c11945170b3c239703a92afe93ab0b921"
 
       define_method(:install) do
         bin.install "eme"
@@ -32,15 +32,15 @@ class Eme < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alderwork/eme/releases/download/v0.1.1/eme_Linux_x86_64.tar.gz"
-      sha256 "9709ecca5587457c40c12de4cb86801ef4989cc425e96f5622eabdef44df6221"
+      url "https://github.com/alderwork/eme/releases/download/v0.1.2/eme_Linux_x86_64.tar.gz"
+      sha256 "3e415cb7dd8175ed723e1dc274607aaa980ad8339db51331a6a44dc1fe6820ff"
       define_method(:install) do
         bin.install "eme"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alderwork/eme/releases/download/v0.1.1/eme_Linux_arm64.tar.gz"
-      sha256 "c750212e0440d9cdae0103ba5a41e58ff5c98af32bafe7d43a4de875443a67db"
+      url "https://github.com/alderwork/eme/releases/download/v0.1.2/eme_Linux_arm64.tar.gz"
+      sha256 "c009e3f536872912d7b686d288aed213d43ef65a3060bb708061ad4b60cafbf4"
       define_method(:install) do
         bin.install "eme"
       end
